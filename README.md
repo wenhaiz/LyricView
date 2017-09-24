@@ -1,4 +1,4 @@
-# LyricView v 1.0.1
+# LyricView V 1.0.1
 
 LyricView 是一个用于展示歌词的 Android 自定义 View，目前只支持 lrc 格式的文件。  
 
