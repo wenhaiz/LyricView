@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="LyricView">
+        <attr name="lrcTextSize" format="dimension" />
+        <attr name="lrcDividerHeight" format="dimension" />
+        <attr name="lrcNormalColor" format="reference|color" />
+        <attr name="lrcHighLightColor" format="reference|color" />
+        <attr name="lrcAnimationDuration" format="integer" />
+        <attr name="lrcEmpty" format="string" />
+        <attr name="lrcPadding" format="dimension" />
+    </declare-styleable>
+</resources>
