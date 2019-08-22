@@ -3,7 +3,7 @@
 LyricView 是一个用于展示歌词的 Android 自定义 View，目前只支持 lrc 格式的文件。  
 
 ## 简介
-在我开发的音乐播放器 [Listen All](https://github.com/wenhaiz/ListenAll) 中有展示歌词的功能，我比较了 [wangchenyan](https://github.com/wangchenyan) 和 [markzhai](https://github.com/markzhai) 的 LyricView ，发现他们都不太开放和友好，所以借助这两个库的成果，我写了这个开源库。  
+在我开发的音乐播放器 [Hi Music](https://github.com/wenhaiz/HiMusic) 中有展示歌词的功能，我比较了 [wangchenyan](https://github.com/wangchenyan) 和 [markzhai](https://github.com/markzhai) 的 LyricView ，发现他们都不太开放和友好，所以借助这两个库的成果，我写了这个开源库。  
 
 在整体结构上，我参考了 [markzhai 的 LyricView](https://github.com/markzhai/LyricView)，在歌词展示上，我参考了[wangchenyan 的 LyricView](https://github.com/wangchenyan/LrcView)。  
 目前看来，这个库是由两个库拼起来的，但是我想后续给它增加一些新功能，比如支持更多格式和更多操作等，在此也感谢两位的付出。 
