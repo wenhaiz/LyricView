@@ -17,6 +17,7 @@ import android.view.View;
 import android.view.animation.LinearInterpolator;
 
 import com.wenhaiz.lyricview.bean.Lyric;
+import com.wenhaiz.lyricview.bean.Sentence;
 import com.wenhaiz.lyricview.utils.ScreenUtil;
 
 public class LyricView extends View {
@@ -49,20 +50,20 @@ public class LyricView extends View {
 
     private void init(AttributeSet attrs) {
         TypedArray ta = getContext().obtainStyledAttributes(attrs, R.styleable.LyricView);
-        float textSize = ta.getDimension(R.styleable.LyricView_lrcTextSize, ScreenUtil.sp2px(getContext(), 12));
+        float textSize = ta.getDimension(R.styleable.LyricView_lrcTextSize, 12);
         mDividerHeight = ta.getDimension(R.styleable.LyricView_lrcDividerHeight, ScreenUtil.dp2px(getContext(), 16));
         mAnimationDuration = ta.getInt(R.styleable.LyricView_lrcAnimationDuration, 1000);
         mAnimationDuration = (mAnimationDuration < 0) ? 1000 : mAnimationDuration;
         mNormalColor = ta.getColor(R.styleable.LyricView_lrcNormalColor, 0xFFFFFFFF);
         mCurrentColor = ta.getColor(R.styleable.LyricView_lrcHighLightColor, 0xFFFF4081);
         mEmpty = ta.getString(R.styleable.LyricView_lrcEmpty);
-        mEmpty = TextUtils.isEmpty(mEmpty) ? "暂无歌词" : mEmpty;
+        mEmpty = TextUtils.isEmpty(mEmpty) ? getContext().getString(R.string.default_empty_text) : mEmpty;
         mLrcPadding = ta.getDimension(R.styleable.LyricView_lrcPadding, 0);
         ta.recycle();
 
         mPaint = new TextPaint();
         mPaint.setAntiAlias(true);
-        mPaint.setTextSize(textSize);
+        mPaint.setTextSize(ScreenUtil.sp2px(getContext(),textSize));
         mPaint.setTextAlign(Paint.Align.LEFT);
     }
 
@@ -212,10 +213,12 @@ public class LyricView extends View {
     }
 
     private void initLyric() {
-        if (getWidth() == 0 || mLyric == null) {
+        if (getWidth() == 0 || mLyric == null
+                || mLyric.getSentenceList() == null
+                || mLyric.getSentenceList().isEmpty()) {
             return;
         }
-        for (Lyric.Sentence sentence : mLyric.getSentenceList()) {
+        for (Sentence sentence : mLyric.getSentenceList()) {
             sentence.init(mPaint, (int) getLrcWidth());
         }
         initNextTime();

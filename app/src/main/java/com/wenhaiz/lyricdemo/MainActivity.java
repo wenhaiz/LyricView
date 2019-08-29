@@ -12,6 +12,5 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         LyricView lyricView = (LyricView) findViewById(R.id.lyric);
-
     }
 }
