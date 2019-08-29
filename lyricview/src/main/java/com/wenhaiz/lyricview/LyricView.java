@@ -7,7 +7,7 @@ import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.os.Looper;
-import android.support.annotation.StringRes;
+import androidx.annotation.StringRes;
 import android.text.Layout;
 import android.text.StaticLayout;
 import android.text.TextPaint;

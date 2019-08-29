@@ -1,6 +1,6 @@
 package com.wenhaiz.lyricview.bean;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import android.text.Layout;
 import android.text.StaticLayout;
 import android.text.TextPaint;
