@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">LyricView</string>
+    <string name="default_empty_text">暂无歌词</string>
 </resources>
